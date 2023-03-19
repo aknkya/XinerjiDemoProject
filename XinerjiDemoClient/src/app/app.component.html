@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"></head>
+<body>
+
+
+
+
+<div class="form-group" style="max-width: 300px;">
+  <input type="date" class="form-control" name="userName" [(ngModel)]="userInput">
+</div>
+<div class="form-group">
+  <button type="button" (click)="getPostsFromComponent()">Get Repos</button>
+</div>
+
+
+
+<table class="table table-hover">
+  <thead >
+  <tr>
+    <th>unit</th>
+    <th>Name</th>
+    <th>currencyName</th>
+    <th>forexBuying</th>
+    <th>forexSelling</th>
+    <th>banknoteBuying</th>
+    <th>banknoteSelling</th>
+    <th>crossRateUSD</th>
+    <th> crossRateOther</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let repo of gets;">
+    <td>{{repo.unit}}</td>
+    <td>{{repo.name}}</td>
+    <td>{{repo.currencyName}}</td>
+    <td>{{repo.forexBuying}}</td>
+    <td>{{repo.forexSelling}}</td>
+    <td>{{repo.banknoteBuying}}</td>
+    <td>{{repo.banknoteSelling}}</td>
+    <td>{{repo.crossRateUSD}}</td>
+    <td>{{repo.crossRateOther}}</td>
+  </tr>
+  </tbody>
+
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+</body>
